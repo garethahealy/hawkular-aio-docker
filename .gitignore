@@ -8,18 +8,3 @@
 .project
 .classpath
 RemoteSystemsTempFiles
-
-# General Java Folders #
-bin/
-target/
-
-# Java Package Files #
-*.jar
-*.class
-
-# General #
-tmp/
-*.tmp
-
-_distro/
-.vagrant/
