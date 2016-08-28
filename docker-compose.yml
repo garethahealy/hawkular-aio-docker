@@ -22,6 +22,6 @@ hawkular-services:
 #    - "8081:8080"
 
 #hawkular-grafana:
-#  image: hawkular-grafana:latest
+#  image: hawkular-grafana:0.1
 #  ports:
 #    - "3000:3000"
