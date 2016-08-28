@@ -1,1 +1,1 @@
-FROM jboss/hawkular-apm-server:latest
+FROM docker.io/jboss/hawkular-apm-server:latest
