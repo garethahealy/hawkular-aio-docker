@@ -1,1 +1,1 @@
-FROM docker.io/openshift/origin-metrics-cassandra:v1.3.0-alpha.3
+FROM docker.io/cassandra:3.7
