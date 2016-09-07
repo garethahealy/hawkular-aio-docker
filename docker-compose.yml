@@ -2,6 +2,11 @@ hawkular-cassandra:
   image: hawkular-cassandra:3.7
   environment:
     - CASSANDRA_START_RPC=true
+  ports:
+    - "7000:7000"
+    - "7001:7001"
+    - "9042:9042"
+    - "9160:9160"
 #  volumes:
 #    - /tmp/opt/hawkular/cassandra:/var/lib/cassandra
 
@@ -28,7 +33,7 @@ hawkular-services:
 #  ports:
 #    - "8081:8080"
 
-#hawkular-grafana:
-#  image: hawkular-grafana:0.1
-#  ports:
-#    - "3000:3000"
+hawkular-grafana:
+  image: hawkular-grafana:0.1
+  ports:
+    - "3000:3000"
