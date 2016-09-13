@@ -11,7 +11,7 @@ hawkular-cassandra:
 #    - /tmp/opt/hawkular/cassandra:/var/lib/cassandra
 
 hawkular-services:
-  image: hawkular-services:0.0.11
+  image: hawkular-services:0.0.12
   ports:
     - "8080:8080"
     - "8443:8443"
@@ -27,6 +27,7 @@ hawkular-services:
     - HAWKULAR_PASSWORD=password
     - HAWKULAR_AGENT_ENABLE=true
     - HAWKULAR_METRICS_TTL=17
+    - LAUNCH_JBOSS_IN_BACKGROUND=true
 
 #hawkular-apm:
 #  image: hawkular-apm:0.0.9
