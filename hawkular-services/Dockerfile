@@ -7,11 +7,13 @@ RUN yum update -y
 # switch back to jboss
 USER 1000
 
-ENV HAWK_SERVICES_VERSION 0.0.12.Final
+ENV HAWK_SERVICES_VERSION 0.0.13.Final
+
+
 
 # Download Hawkular-Services
 RUN cd $HOME \
- && curl -L https://github.com/hawkular/hawkular-services/releases/download/$HAWK_SERVICES_VERSION/hawkular-services-dist-$HAWK_SERVICES_VERSION.zip -o hawkular-services-dist-$HAWK_SERVICES_VERSION.zip \
+ && curl -L http://origin-repository.jboss.org/nexus/content/repositories/public/org/hawkular/services/hawkular-services-dist/$HAWK_SERVICES_VERSION/hawkular-services-dist-$HAWK_SERVICES_VERSION.zip -o hawkular-services-dist-$HAWK_SERVICES_VERSION.zip \
  && bsdtar -xf hawkular-services-dist-$HAWK_SERVICES_VERSION.zip \
  && rm -f hawkular-services-dist-$HAWK_SERVICES_VERSION.zip \
  && mv hawkular-services-dist-$HAWK_SERVICES_VERSION hawkular-services-dist
