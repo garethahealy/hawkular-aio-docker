@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build --tag=hawkular-cassandra:latest grafana
-  - docker build --tag=hawkular-services:latest hawkular-apm
-  - docker build --tag=hawkular-apm:latest hawkular-cassandra
-  - docker build --tag=hawkular-grafana:latest hawkular-services
+  - docker build --tag=hawkular-grafana:latest grafana
+  - docker build --tag=hawkular-apm:latest hawkular-apm
+  - docker build --tag=hawkular-cassandra:latest hawkular-cassandra
+  - docker build --tag=hawkular-services:latest hawkular-services
