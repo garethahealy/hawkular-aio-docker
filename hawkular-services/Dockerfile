@@ -7,9 +7,7 @@ RUN yum update -y
 # switch back to jboss
 USER 1000
 
-ENV HAWK_SERVICES_VERSION 0.0.13.Final
-
-
+ENV HAWK_SERVICES_VERSION 0.0.14.Final
 
 # Download Hawkular-Services
 RUN cd $HOME \
@@ -19,7 +17,8 @@ RUN cd $HOME \
  && mv hawkular-services-dist-$HAWK_SERVICES_VERSION hawkular-services-dist
 
 # Add user
-RUN sh $HOME/hawkular-services-dist/bin/add-user.sh -a -u admin -p admin -g read-write,read-only
+RUN sh $HOME/hawkular-services-dist/bin/add-user.sh -a -u admin -p admin -g read-write,read-only \
+    && sh $HOME/hawkular-services-dist/bin/add-user.sh -a -u jdoe -p password -g read-write,read-only
 
 # Expose the ports we're interested in
 EXPOSE 8080
