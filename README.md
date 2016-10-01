@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/garethahealy/hawkular-aio-docker.svg?branch=master)](https://travis-ci.org/garethahealy/hawkular-aio-docker)
+
 # hawkular-aio-docker
 ## Run
 - docker-compose up
