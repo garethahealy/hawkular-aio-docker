@@ -30,7 +30,7 @@ hawkular-services:
     - LAUNCH_JBOSS_IN_BACKGROUND=true
 
 #hawkular-apm:
-#  image: hawkular-apm:0.0.9
+#  image: hawkular-apm:0.0.10
 #  ports:
 #    - "8081:8080"
 
