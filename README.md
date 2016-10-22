@@ -6,7 +6,7 @@
 
 ## Build
 - docker build --tag=hawkular-cassandra:3.7 .
-- docker build --tag=hawkular-services:0.0.14 .
+- docker build --tag=hawkular-services:0.0.16 .
 - docker build --tag=hawkular-apm:0.0.10 .
 - docker build --tag=hawkular-grafana:0.1 .
 

@@ -1,9 +1,20 @@
 sudo: required
 services:
   - docker
-before_install:
+addons:
+  apt:
+    packages:
+    - nodejs
+    - npm
+install:
+  - npm install -g dockerfile_lint
+before_script:
+  - dockerfile_lint  -f grafana/Dockerfile
+  - dockerfile_lint  -f hawkular-apm/Dockerfile
+  - dockerfile_lint  -f hawkular-cassandra/Dockerfile
+  - dockerfile_lint  -f hawkular-services/Dockerfile
+script:
   - docker build --tag=hawkular-grafana:latest grafana
   - docker build --tag=hawkular-apm:latest hawkular-apm
   - docker build --tag=hawkular-cassandra:latest hawkular-cassandra
   - docker build --tag=hawkular-services:latest hawkular-services
-script: /bin/true

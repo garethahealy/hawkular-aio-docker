@@ -1,4 +1,10 @@
 FROM docker.io/cassandra:3.7
+MAINTAINER garethahealy (https://github.com/garethahealy/)
+
+LABEL Name="hawkular-cassandra (docker.io/cassandra:3.7)" \
+    Vendor="com.garethahealy" \
+    Version="3.7" \
+    License="Apache License, Version 2.0"
 
 # Update to latest packages
 RUN apt-get update \
