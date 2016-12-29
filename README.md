@@ -6,9 +6,9 @@
 
 ## Build
 - docker build --tag=hawkular-cassandra:3.7 .
-- docker build --tag=hawkular-services:0.0.16 .
+- docker build --tag=hawkular-services:0.23.0 .
 - docker build --tag=hawkular-apm:0.0.10 .
-- docker build --tag=hawkular-grafana:0.1 .
+- docker build --tag=hawkular-grafana:1.0.6 .
 
 ## UIs
 - DOCKERMACHINE_IP=$(docker-machine env | grep DOCKER_HOST | cut -d'"' -f2 | cut -d'/' -f3 | cut -d':' -f1)

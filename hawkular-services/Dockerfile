@@ -1,9 +1,9 @@
 FROM docker.io/jboss/base-jdk:8
 MAINTAINER garethahealy (https://github.com/garethahealy/)
 
-LABEL Name="hawkular-services" \
+LABEL Name="hawkular-services (docker.io/jboss/base-jdk:8)" \
     Vendor="com.garethahealy" \
-    Version="0.0.16" \
+    Version="0.23.0" \
     License="Apache License, Version 2.0"
 
 # Update to latest packages
@@ -14,7 +14,7 @@ RUN yum update -y && \
 # switch back to jboss
 USER 1000
 
-ENV HAWK_SERVICES_VERSION 0.0.16.Final
+ENV HAWK_SERVICES_VERSION 0.23.0.Final
 
 # Download Hawkular-Services
 RUN cd $HOME \
