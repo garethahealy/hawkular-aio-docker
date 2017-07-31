@@ -1,4 +1,0 @@
-hawkular-apm:
-  image: hawkular-apm:0.0.10
-  ports:
-    - "8081:8080"
