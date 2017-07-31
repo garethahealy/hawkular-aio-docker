@@ -5,10 +5,9 @@
 - docker-compose up
 
 ## Build
-- docker build --tag=hawkular-cassandra:3.7 .
-- docker build --tag=hawkular-services:0.23.0 .
-- docker build --tag=hawkular-apm:0.0.10 .
-- docker build --tag=hawkular-grafana:1.0.6 .
+- docker build --tag=hawkular-cassandra:3.6.0 hawkular-cassandra
+- docker build --tag=hawkular-services:0.38.0 hawkular-services
+- docker build --tag=hawkular-grafana:1.0.10 hawkular-grafana
 
 ## UIs
 - DOCKERMACHINE_IP=$(docker-machine env | grep DOCKER_HOST | cut -d'"' -f2 | cut -d'/' -f3 | cut -d':' -f1)

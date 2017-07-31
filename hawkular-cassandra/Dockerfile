@@ -1,14 +1,15 @@
-FROM docker.io/cassandra:3.7
+FROM docker.io/openshift/origin-metrics-cassandra:v1.5.0
 MAINTAINER garethahealy (https://github.com/garethahealy/)
 
-LABEL Name="hawkular-cassandra (docker.io/cassandra:3.7)" \
+LABEL Name="hawkular-cassandra (docker.io/openshift/origin-metrics-cassandra:v1.5.0)" \
     Vendor="com.garethahealy" \
-    Version="3.7" \
+    Version="1.5.0" \
     License="Apache License, Version 2.0"
 
 # Update to latest packages
-RUN apt-get update \
-    && apt-get upgrade -y
+USER root
+RUN yum update -y && \
+    yum clean all
 
-RUN sed -i "s/#-Xms4G/-Xms4G/g" /etc/cassandra/jvm.options \
-    && sed -i "s/#-Xmx4G/-Xmx4G/g" /etc/cassandra/jvm.options
+# switch back to cassendra
+USER 313
