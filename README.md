@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/garethahealy/hawkular-aio-docker.svg?branch=master)](https://travis-ci.org/garethahealy/hawkular-aio-docker)
+[![License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)]()
 
 # hawkular-aio-docker
 ## Run
