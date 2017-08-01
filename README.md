@@ -3,7 +3,7 @@
 
 # hawkular-aio-docker
 ## Build
-- docker build --tag=hawkular-cassandra:3.6.0 hawkular-cassandra
+- docker build --tag=hawkular-cassandra:1.5.0 hawkular-cassandra
 - docker build --tag=hawkular-services:0.38.0 hawkular-services
 - docker build --tag=hawkular-grafana:1.0.10 hawkular-grafana
 
