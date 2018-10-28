@@ -9,4 +9,5 @@ LABEL Name="hawkular-grafana (docker.io/hawkular/hawkular-grafana-datasource:1.1
 # Update to latest packages
 USER root
 RUN yum update -y && \
-    yum clean all
+    rm -rf /var/cache/yum && \
+    yum -y clean all
