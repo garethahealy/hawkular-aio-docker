@@ -9,7 +9,8 @@ LABEL Name="hawkular-cassandra (docker.io/openshift/origin-metrics-cassandra:v3.
 # Update to latest packages
 USER root
 RUN yum update -y && \
-    yum clean all
+    rm -rf /var/cache/yum && \
+    yum -y clean all
 
 # switch back to cassendra
 USER 313
