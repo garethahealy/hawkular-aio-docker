@@ -9,7 +9,8 @@ LABEL Name="hawkular-services (docker.io/hawkular/hawkular-services:0.40.1.Final
 # Update to latest packages
 USER root
 RUN yum update -y && \
-    yum clean all
+    rm -rf /var/cache/yum && \
+    yum -y clean all
 
 # switch back to jboss
 USER 1000
