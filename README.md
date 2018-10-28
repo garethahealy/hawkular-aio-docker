@@ -3,9 +3,9 @@
 
 # hawkular-aio-docker
 ## Build
-- docker build --tag=hawkular-cassandra:1.5.0 hawkular-cassandra
-- docker build --tag=hawkular-services:0.38.0 hawkular-services
-- docker build --tag=hawkular-grafana:1.0.10 hawkular-grafana
+- docker build --tag=hawkular-cassandra:v3.11 hawkular-cassandra
+- docker build --tag=hawkular-services:0.40.1.Final hawkular-services
+- docker build --tag=hawkular-grafana:1.1.2 hawkular-grafana
 
 ## Run
 - docker-compose up
