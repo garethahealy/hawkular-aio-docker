@@ -12,7 +12,7 @@
 
 ## UIs
 - eval $(docker-machine env)
-- DOCKERMACHINE_IP=$(echo $DOCKER_HOST | cut -d'/' -f3 | cut -d':' -f1)
+- DOCKERMACHINE_IP=$(docker-machine ip)
 - export HAWKULAR_ENDPOINT=${DOCKERMACHINE_IP:-localhost}
 
 ## Services
